@@ -16,7 +16,7 @@ def upload_to_gcs(url, date, bucket_name):
     # 取名
     filename = f"{date}.jpg"
     
-    # 自動辨識內容的類型
+    # 自動辨識內容的類型，mime_type, encoding
     mime_type, _ = mimetypes.guess_type(filename)
     
     bucket = storage_client.bucket(bucket_name)
